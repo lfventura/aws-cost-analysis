@@ -38,10 +38,10 @@ A report key comes in the following format:
 
 def extract_period(s3key):
     dirs = s3key.split('/')
-    period = dirs[len(dirs)-3]
+    period = dirs[len(dirs)-2]
 
     prefix = ""
-    for d in dirs[0:len(dirs)-3]:
+    for d in dirs[0:len(dirs)-2]:
         prefix += d+"/"
 
     year = period[0:4]

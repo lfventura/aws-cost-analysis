@@ -3,11 +3,11 @@
 ---
 Environment:
   Variables:
-    ATHENA_BASE_OUTPUT_S3_BUCKET: "s3://<bucket-where-athena-results-are-put>"
-    CUR_PROCESSOR_DEST_S3_BUCKET: "<name-of-bucket-to-put-cost-usage-reports>"
-    CUR_PROCESSOR_DEST_S3_PREFIX: "<prefix>/"
-    AWS_ACCOUNT_METADATA_DDB_TABLE: "<name-of-ddb-table>"
+    ATHENA_BASE_OUTPUT_S3_BUCKET: "s3://meu_bucket_origem"
+    CUR_PROCESSOR_DEST_S3_BUCKET: "meu_bucket_destino"
+    CUR_PROCESSOR_DEST_S3_PREFIX: "diretorio_destino/"
+    AWS_ACCOUNT_METADATA_DDB_TABLE: "nome_tabela"
     LAMBDA_OWNER_AWS_ACCESS_KEY_ID: "<aws-iam-key-id-(only-used-in-cross-account-scenarios)>"
     LAMBDA_OWNER_AWS_SECRET_ACCESS_KEY: "<secret-access-key-(only-used-in-cross-account-scenarios)>"
-    STEP_FUNCTION_PREPARE_CUR_ATHENA: "<arn-of-step-function>"
-    SNS_TOPIC: "<arn-of-sns-topic-to-send-notifications-to>"
+    STEP_FUNCTION_PREPARE_CUR_ATHENA: "arn:aws:states:us-east-1:xxxx:stateMachine:meunomelegal"
+    SNS_TOPIC: "NAOUSAREI"

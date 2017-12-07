@@ -105,18 +105,18 @@ def handler(event, context):
                                                  name=execname,
                                                  input=json.dumps(kwargs))
 
-            #Prepare SNS notification
+#            #Prepare SNS notification
             sfn_executionarn = sfnresponse['executionArn']
-            sfn_executionlink = 'https://console.aws.amazon.com/states/home?region=us-east-1#/executions/details/'+sfn_executionarn+"\n"
-            sfn_executionlinks += sfn_executionlink
+#            sfn_executionlink = 'https://console.aws.amazon.com/states/home?region=us-east-1#/executions/details/'+sfn_executionarn+"\n"
+#            sfn_executionlinks += sfn_executionlink
             execnames.append(execname)
 
             log.info("Started execution - executionArn: {}".format(sfn_executionarn))
 
-    if sfn_executionlinks:
-        snsclient.publish(TopicArn=consts.SNS_TOPIC,
-            Message='New Cost and Usage report. Started execution:\n'+sfn_executionlinks,
-            Subject='New incoming Cost and Usage report executions')
+#    if sfn_executionlinks:
+#        snsclient.publish(TopicArn=consts.SNS_TOPIC,
+#            Message='New Cost and Usage report. Started execution:\n'+sfn_executionlinks,
+#            Subject='New incoming Cost and Usage report executions')
 
     log.info("Started executions: [{}]".format(execnames))
 

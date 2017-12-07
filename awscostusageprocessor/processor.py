@@ -58,8 +58,6 @@ class CostUsageProcessor():
         if not self.accountId:
             self.accountId = self.curManifestJson.get('account','')
 
-
-
     """
     This method copies AWS Cost and Usage report files to an S3 bucket, where they will
     be used by either Athena or QuickSight. There are file preparation activities that

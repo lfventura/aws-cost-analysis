@@ -1,3 +1,14 @@
+### INFO FROM LUCAS
+
+How to:
+1. Create the Step Function with a Hello world to get its arn
+2. Add this ARN to the environment file
+3. Install the pip modules that are shown in requirements.txt using pip install -t lib/python2.7/site-packages/ <name>
+4. Create the Stack (Create a ZIP of this repo and upload it to Cloudformation)
+5. Go to the Step Function and update it with the template json provided in the functions folder
+6. Go to the S3EventStepFunctionStarter Lambda and add the trigger to your S3 bucket were AWS puts the reports
+7. Done
+
 # AWS Cost AnalysisTools
 
 
